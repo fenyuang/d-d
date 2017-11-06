@@ -25,5 +25,7 @@ C:\github\ding-ding\build\webpack.base.conf.js
 C:\github\ding-ding\index.html
 
 这个文件引用的动画库是非压缩版本，开发完要换成压缩版本。
+# 端口号
+d-d/config/index.js 30行
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
