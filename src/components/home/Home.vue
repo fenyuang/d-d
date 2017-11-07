@@ -6,7 +6,7 @@
       <div class="page_wp">
         <div class="page_box show">
           <div class="content img1">
-            <div class="miniBox">
+            <div class="miniBox spe">
               <h1 class="desc animated" v-bind:class="[index===0&&'bounceInLeft']">全品类家庭维修互联网服务平台</h1>
               <h1 class="desc animated" v-bind:class="[index===0&&'bounceInRight']">一键享受专业维修上门服务</h1>
             </div>
@@ -215,10 +215,12 @@ export default {
     text-align: center;
     font-weight: 500;
   }
+
   .page_box .miniBox{
     width: 1180px;
     margin: 340px auto;
   }
+
   .page_box .img4 .desc{
     font-family: 'Microsoft YaHei';
     font-size: 30px;
