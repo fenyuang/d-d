@@ -257,12 +257,16 @@ export default {
   height: 600px;
   margin: 0 auto;}
 .OrderPage .banner1 .banner_content{
-  width: 1920px;
-  position: absolute;
-  left: 50%;
-  margin-left: -960px;
-  height: 600px;
-  background: url(./pict/banner_top.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e0e0;
+    background-image: url(./pict/banner_top.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .OrderPage{

@@ -58,7 +58,6 @@ export default {
   mounted:function(){
   	// $(".question_content li").unbind();
   	$(".question_content li").click(function(){
-  		console.log(1);
   		$(this).find(".one_p").addClass("active")
   	    $(this).find(".two_wrap p").show();
   	    $(this).siblings().find(".two_wrap p").hide();

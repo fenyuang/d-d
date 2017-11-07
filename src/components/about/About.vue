@@ -67,41 +67,43 @@ export default {
 <style scoped>
 
 .AboutPage .banner1{
-  position: relative;
-  width: 100%;
-  height: 600px;
-  margin: 0 auto;}
+  	position: relative;
+  	height: 600px;
+  	margin: 0 auto;
+  }
 .AboutPage .banner1 .banner_content{
-  width: 1920px;
-  position: absolute;
-  left: 50%;
-  margin-left: -960px;
-  height: 600px;
-  background: url(./picture/bn.png) no-repeat;
-
-
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e0e0;
+  	background-image: url(./picture/bn.png);
+  	background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
 }
-	.tab .tab_title{
-		border-bottom: 1px solid #fafafa;
-	}
-	.tab ul{
-		width: 610px;
-		margin: 0 auto;
-	}
-	.tab .tab_title li{
-		float: left;
-		width: 122px;
-		height: 66px;
-		line-height: 66px;
-		color: #333;
-		text-align: center;
-	}
-	.tab .tab_title a{
-		font-family: 'Microsoft YaHei';
-		font-size: 14px;
-		color: #333;
-	}
-	.tab .tab_title .cur a{
-		color: #ea5413;
-	}
+.tab .tab_title{
+	border-bottom: 1px solid #fafafa;
+}
+.tab ul{
+	width: 610px;
+	margin: 0 auto;
+}
+.tab .tab_title li{
+	float: left;
+	width: 122px;
+	height: 66px;
+	line-height: 66px;
+	color: #333;
+	text-align: center;
+}
+.tab .tab_title a{
+	font-family: 'Microsoft YaHei';
+	font-size: 14px;
+	color: #333;
+}
+.tab .tab_title .cur a{
+	color: #ea5413;
+}
 </style>
