@@ -53,6 +53,7 @@
 			</div>
 		</div>
 	</div> 
+	<Floating></Floating>
 	<FooterTag></FooterTag>
   </div>
 </template>
@@ -61,6 +62,7 @@
 import HeaderTag from '../common/Header.vue'
 import Focus from '../common/Focus.vue'
 import FooterTag from '../common/Footer.vue'
+import Floating from '../common/Floating.vue'
 export default {
 	name: 'RecruitPage',
 	data() {
@@ -158,7 +160,7 @@ export default {
 		})
 	},
   	components: {
-    	Focus,HeaderTag,FooterTag
+    	Focus,HeaderTag,FooterTag,Floating
   	}
 }
 </script>

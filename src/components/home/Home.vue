@@ -21,7 +21,7 @@
         </div>
         <div class="page_box">
           <div class="content img3">
-            <div class="miniBox">
+            <div class="miniBox spe_two">
               <h1 class="desc animated" v-bind:class="[index===2&&'tada']">三个月内无限次免费为您提供售后服务</h1>
             </div>
           </div>
@@ -182,9 +182,10 @@ export default {
       width: 100%;
       height: 100%;
       background-color: #e0e0e0;
-      background-size: cover;
+ /*     background-size: cover;*/
+      background-size: 100% 100%;
       background-position: 50%;
-      background-repeat: no-repeat;
+      background-repeat:no-repeat;
 
   }
   .page_box.show {
@@ -203,7 +204,7 @@ export default {
   }
   .page_box .img3{
     /*padding-top: 200px;*/
-    background-image: url('./images/f.png')
+    background-image: url('./images/y.png')
   }
   .page_box .img4{
     background-image: url('./images/banner4.png')
@@ -219,6 +220,12 @@ export default {
   .page_box .miniBox{
     width: 1180px;
     margin: 340px auto;
+  }
+  .page_box .spe{
+    margin: 280px -180px;
+  }
+  .page_box .spe_two{
+    margin: 125px 300px
   }
 
   .page_box .img4 .desc{

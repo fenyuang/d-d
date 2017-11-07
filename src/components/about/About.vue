@@ -1,7 +1,10 @@
 <template>
   <div class="AboutPage">
   	  	<HeaderTag page="about"></HeaderTag>
-  		<Focus></Focus>
+<!--   		<Focus></Focus> -->
+      <div class="banner1">
+         <div class="banner_content"></div>   
+      </div>
 		<div class="tab">
 			<div class="tab_title">
 				<ul class="cf">
@@ -30,14 +33,16 @@
 				</div>
 			</div>
 		</div>
+		<Floating></Floating>
 		<FooterTag></FooterTag>
   </div>
 </template>
 
 <script>
 import HeaderTag from '../common/Header.vue'
-import Focus from '../common/Focus.vue'
+// import Focus from '../common/Focus.vue'
 import FooterTag from '../common/Footer.vue'
+import Floating from '../common/Floating.vue'
 
 import LtdInfo from './LtdInfo.vue'
 import JoinUs from './JoinUs.vue'
@@ -53,13 +58,29 @@ export default {
     }
   },
   components: {
-    HeaderTag,Focus,FooterTag,LtdInfo, JoinUs, ContactUs, Message, FQA
+    HeaderTag,FooterTag,LtdInfo, JoinUs, ContactUs, Message, FQA,Floating
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.AboutPage .banner1{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;}
+.AboutPage .banner1 .banner_content{
+  width: 1920px;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+  height: 600px;
+  background: url(./picture/bn.png) no-repeat;
+
+
+}
 	.tab .tab_title{
 		border-bottom: 1px solid #fafafa;
 	}

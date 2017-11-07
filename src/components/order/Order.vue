@@ -1,6 +1,9 @@
 <template>
   <div class="OrderPage">
   <HeaderTag page="order"></HeaderTag>
+      <div class="banner1">
+         <div class="banner_content"></div>   
+      </div>
   <div class="order_content">
       <div class="order_wrap">
          <div class="service_list">
@@ -48,7 +51,7 @@
                   </li>
               </ul>
          </div>
-          <div class="repair_content">
+          <div class="repair_content" style="display:block;">
                <h1>您需要维修的是？</h1>
                <div>
                  <ul>
@@ -91,7 +94,7 @@
                  </ul>
                </div> 
           </div>
-           <div class="repair_content">
+           <div class="repair_content" style="display:block;">
                <h1>您的维修设备是？</h1>
                <div>
                  <ul>
@@ -130,7 +133,7 @@
                  </ul>
                </div> 
           </div>
-          <div class="repair_content">
+          <div class="repair_content" style="display:block;">
                <h1>您的设备问题是？</h1>
                <div>
                  <ul>
@@ -173,9 +176,9 @@
                  </ul>
                </div> 
           </div>
-          <div class="order_bottom">
+          <div class="order_bottom" style="display:block;">
             <h1>根据你的设备问题，给出以下维修方案</h1>
-            <div class="bottom_list">
+            <div class="bottom_list" >
                 <table>
                     <tr class="td_spe">
                         <td>故障问题</td>
@@ -232,6 +235,14 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+  mounted: function(){
+
+  },
+  methods: function(){
+
+
+
+  },
   components: {
     HeaderTag, FooterTag, Floating
   }
@@ -240,6 +251,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.OrderPage .banner1{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;}
+.OrderPage .banner1 .banner_content{
+  width: 1920px;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+  height: 600px;
+  background: url(./pict/banner_top.png) no-repeat;
+}
+
 .OrderPage{
   background-color: #fafafa;
 }
