@@ -185,6 +185,7 @@ export default {
       background-size: cover;
       background-position: 50%;
       background-repeat: no-repeat;
+
   }
   .page_box.show {
       left: 0;
@@ -194,7 +195,7 @@ export default {
   }
   .page_box .img1{
     /*padding-top: 200px;*/
-    background-image: url('./images/banner1.png')
+    background-image: url('./images/z.png')
   }
   .page_box .img2{
     /*padding-top: 200px;*/
@@ -202,7 +203,7 @@ export default {
   }
   .page_box .img3{
     /*padding-top: 200px;*/
-    background-image: url('./images/banner3.png')
+    background-image: url('./images/f.png')
   }
   .page_box .img4{
     background-image: url('./images/banner4.png')
