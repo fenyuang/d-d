@@ -182,7 +182,8 @@ export default {
       width: 100%;
       height: 100%;
       background-color: #e0e0e0;
-      background-size: cover;
+      /*background-size: cover;*/
+      background-size: auto 100%;
       background-position: 50%;
       background-repeat: no-repeat;
 
