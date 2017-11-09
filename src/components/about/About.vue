@@ -11,7 +11,7 @@
 					<li v-bind:class="[value===0&&'cur']" v-on:click="value=0"><a href="javascript:;">企业介绍</a></li>
 					<li v-bind:class="[value===1&&'cur']" v-on:click="value=1"><a href="javascript:;">加入我们</a></li>
 					<li v-bind:class="[value===2&&'cur']" v-on:click="value=2"><a href="javascript:;">联系我们</a></li>
-					<li v-bind:class="[value===3&&'cur']" v-on:click="value=3"><a href="javascript:;">留言建议</a></li>
+					<!-- <li v-bind:class="[value===3&&'cur']" v-on:click="value=3"><a href="javascript:;">留言建议</a></li> -->
 					<li v-bind:class="[value===4&&'cur']" v-on:click="value=4"><a href="javascript:;">常见问题</a></li>
 				</ul>
 			</div>
@@ -87,7 +87,8 @@ export default {
 	border-bottom: 1px solid #fafafa;
 }
 .tab ul{
-	width: 610px;
+	/*width: 610px;*/
+	width: 488px;
 	margin: 0 auto;
 }
 .tab .tab_title li{
