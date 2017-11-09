@@ -12,7 +12,6 @@
 			</li>
 			<li><a href="#"><img src="./img/top.png" height="50" width="50"></a></li>
 		</ul>
-
 	</div>
   </div>
 </template>

@@ -9,9 +9,9 @@
          <div class="service_list">
               <h1>您需要的服务是？</h1>
                <ul class="cf">
-                  <li>
+                  <li v-on:click="getFirstLevelData('002')">
                       <div class="li_wrap cf">
-                          <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
+                          <div class="img_left dis" v-bind:style="{display:firstLevelId=='002'?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div>
                           <div class="one"><img src="./pict/household.png"></div>
                           <div class="two">
                             <h3>家电维修</h3>
@@ -19,19 +19,29 @@
                           </div>     
                       </div>
                   </li>
-                  <li>
+                  <li v-on:click="getFirstLevelData('003')">
                       <div class="li_wrap cf">
-                          <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                          <div class="one"><img src="./pict/furniture.png" height="86" width="86"></div>
+                          <div class="img_left dis" v-bind:style="{display:firstLevelId=='003'?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div>
+                          <div class="one"><img src="./pict/phone.png" height="86" width="86"></div>
                           <div class="two">
-                            <h3>家具维修</h3>
-                            <p>门窗家具维修,灯具安装灯具/电路,等</p>
+                            <h3>手机维修</h3>
+                            <p>手机/电脑维修,电池更换/网络调试等</p>
                           </div>
                       </div>
                   </li>
-                  <li>
+                  <li v-on:click="getFirstLevelData('004')">
+                    <div class="li_wrap cf">
+                        <div class="img_left dis" v-bind:style="{display:firstLevelId=='004'?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div>
+                        <div class="one"><img src="./pict/furniture.png" height="86" width="86"></div>
+                        <div class="two">
+                          <h3 >家居维修</h3>
+                          <p>门窗家居维修，灯具安装/灯具电路等</p>
+                        </div>  
+                    </div>
+                  </li>
+                  <li v-on:click="getFirstLevelData('006')">
                       <div class="li_wrap cf">
-                          <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
+                          <div class="img_left dis" v-bind:style="{display:firstLevelId=='006'?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div>
                           <div class="one"><img src="./pict/bathroom.png" height="86" width="86"></div>
                           <div class="two">
                             <h3>卫浴洁具</h3>
@@ -39,140 +49,60 @@
                           </div>   
                       </div>
                   </li>
-                  <li>
-                    <div class="li_wrap cf">
-                        <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                        <div class="one"><img src="./pict/equipment.png" height="86" width="86"></div>
-                        <div class="two">
-                          <h3 >智能设备</h3>
-                          <p>电脑/网络维修，网络调试电脑系统重装等</p>
-                        </div>  
-                    </div>
-                  </li>
+                  
               </ul>
          </div>
-          <div class="repair_content" style="display:block;">
-               <h1>您需要维修的是？</h1>
+          <div class="repair_content">
+               <h1>{{firstLevelTitle}}</h1>
                <div>
                  <ul>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>冰箱</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电视</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>空调</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>洗衣机</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电磁炉</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电磁炉</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电磁炉</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电磁炉</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>电磁炉</span>
-                   </li>
+                   <!-- <div v-if="firstLevelBeans.length==0">无数据</div> -->
+                   <li v-for="item in firstLevelBeans" v-on:click="getSecondLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:secondLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
+                 </ul>
+               </div>
+          </div>
+           <div class="repair_content">
+               <h1>{{secondLevelTitle}}</h1>
+               <div>
+                 <ul>
+                    <!-- <div v-if="secondLevelBeans.length==0">无数据</div> -->
+                    <li v-for="item in secondLevelBeans" v-on:click="getThreeLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:threeLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
                  </ul>
                </div> 
           </div>
-           <div class="repair_content" style="display:block;">
-               <h1>您的维修设备是？</h1>
+          <div class="repair_content">
+               <h1>{{threeLevelTitle}}</h1>
                <div>
                  <ul>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>单门冰箱</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>双门冰箱</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
-                    <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
-                     <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>三门冰箱</span>
-                   </li>
+                   <!-- <div v-if="threeLevelBeans.length==0">无数据</div> -->
+                   <li v-for="item in threeLevelBeans" v-on:click="getFourLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:fourLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
                  </ul>
                </div> 
           </div>
-          <div class="repair_content" style="display:block;">
-               <h1>您的设备问题是？</h1>
+          <div class="repair_content">
+               <h1>{{fourLevelTitle}}</h1>
                <div>
                  <ul>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不制冷</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不亮灯</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>冰箱不启动</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不制冷</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不亮灯</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>冰箱不启动</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不制冷</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>不亮灯</span>
-                   </li>
-                   <li>
-                    <div class="img_left dis"><img src="./pict/checked.png" height="40" width="40"></div>
-                    <span>冰箱不启动</span>
-                   </li>
+                   <!-- <div v-if="fourLevelBeans.length==0">无数据</div> -->
+                   <li v-for="item in fourLevelBeans" v-on:click="getFiveLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:fiveLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
+                 </ul>
+               </div> 
+          </div>
+          <div class="repair_content">
+               <h1>{{fiveLevelTitle}}</h1>
+               <div>
+                 <ul>
+                   <!-- <div v-if="fiveLevelBeans.length==0">无数据</div> -->
+                   <li v-for="item in fiveLevelBeans" v-on:click="getSixLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:sixLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
+                 </ul>
+               </div> 
+          </div>
+          <div class="repair_content">
+               <h1>{{sixLevelTitle}}</h1>
+               <div>
+                 <ul>
+                   <!-- <div v-if="sixLevelBeans.length==0">无数据</div> -->
+                   <li v-for="item in sixLevelBeans" v-on:click="getSevenLevelData(item.a)"><div class="img_left dis" v-bind:style="{display:sevenLevelId==item.a?'block':'none'}"><img src="./pict/checked.png" height="40" width="40"></div><span>{{item.b}}</span></li>
                  </ul>
                </div> 
           </div>
@@ -232,15 +162,188 @@ export default {
   name: 'OrderPage',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      firstLevelId:'',
+      secondLevelId:'',
+      threeLevelId:'',
+      fourLevelId:'',
+      fiveLevelId:'',
+      sixLevelId:'',
+      sevenLevelId:'',
+      firstLevelTitle:'',
+      secondLevelTitle:'',
+      threeLevelTitle:'',
+      fourLevelTitle:'',
+      fiveLevelTitle:'',
+      sixLevelTitle:'',
+      sevenLevelTitle:'',
+      firstLevelBeans : [],
+      secondLevelBeans:[],
+      threeLevelBeans:[],
+      fourLevelBeans:[],
+      fiveLevelBeans:[],
+      sixLevelBeans:[],
+      sevenLevelBeans:[]
+    }
+  },
+  methods:{
+    getFirstLevelData:function(parentId){
+      var _this = this;
+      this.firstLevelId = parentId
+      $.ajax({
+       url:"http://app.dingdingkuaixiu.com/articleinfo/findlabelbusinessbyflabel",
+       data:{
+         id: parentId
+       },
+       dataType:"json",
+       success: function(rs){
+         if (rs.code=="0000") {
+           _this.firstLevelTitle = rs.result.c;
+           _this.firstLevelBeans = rs.result.beans||[];
+           _this.secondLevelId='';
+           _this.threeLevelId='';
+           _this.fourLevelId='';
+           _this.fiveLevelId='';
+           _this.sixLevelId='';
+           _this.sevenLevelId='';
+          _this.secondLevelTitle='';
+          _this.threeLevelTitle='';
+          _this.fourLevelTitle='';
+          _this.fiveLevelTitle='';
+          _this.sixLevelTitle='';
+          _this.sevenLevelTitle='';
+           _this.secondLevelBeans=[];
+           _this.threeLevelBeans=[];
+           _this.fourLevelBeans=[];
+           _this.fiveLevelBeans=[];
+           _this.sixLevelBeans=[];
+           _this.sevenLevelBeans=[];
+         }else{
+           alert(rs.error);
+         }
+       },
+       error:function(){
+         alert("网络错误")
+       }
+      })
+    },
+    getSecondLevelData:function(id){
+      for(var x in this.firstLevelBeans){
+        if(this.firstLevelBeans[x].a==id){
+          this.secondLevelId = this.firstLevelBeans[x].a;
+          this.secondLevelTitle = this.firstLevelBeans[x].c;
+          this.secondLevelBeans=this.firstLevelBeans[x].beans||[];
+          this.threeLevelId='';
+          this.fourLevelId='';
+          this.fiveLevelId='';
+          this.sixLevelId='';
+          this.sevenLevelId='';
+          this.threeLevelTitle='';
+          this.fourLevelTitle='';
+          this.fiveLevelTitle='';
+          this.sixLevelTitle='';
+          this.sevenLevelTitle='';
+          this.threeLevelBeans=[];
+          this.fourLevelBeans=[];
+          this.fiveLevelBeans=[];
+          this.sixLevelBeans=[];
+          this.sevenLevelBeans=[]
+          break;
+        }
+      }
+    },
+    getThreeLevelData:function(id){
+      for(var x in this.secondLevelBeans){
+        if(this.secondLevelBeans[x].a==id){
+          this.threeLevelId = this.secondLevelBeans[x].a;
+          this.threeLevelTitle = this.secondLevelBeans[x].c;
+          this.threeLevelBeans=this.secondLevelBeans[x].beans||[];
+          this.fourLevelId='';
+          this.fiveLevelId='';
+          this.sixLevelId='';
+          this.sevenLevelId='';
+          this.fourLevelTitle='';
+          this.fiveLevelTitle='';
+          this.sixLevelTitle='';
+          this.sevenLevelTitle='';
+          this.fourLevelBeans=[];
+          this.fiveLevelBeans=[];
+          this.sixLevelBeans=[];
+          this.sevenLevelBeans=[];
+          break;
+        }
+      }
+    },
+    getFourLevelData:function(id){
+      for(var x in this.threeLevelBeans){
+        if(this.threeLevelBeans[x].a==id){
+          this.fourLevelId = this.threeLevelBeans[x].a;
+          this.fourLevelTitle = this.threeLevelBeans[x].c;
+          this.fourLevelBeans=this.threeLevelBeans[x].beans||[];
+          this.fiveLevelId='';
+          this.sixLevelId='';
+          this.sevenLevelId='';
+          this.fiveLevelTitle='';
+          this.sixLevelTitle='';
+          this.sevenLevelTitle='';
+          this.fiveLevelBeans=[];
+          this.sixLevelBeans=[];
+          this.sevenLevelBeans=[];
+          break;
+        }
+      }
+    },
+    getFiveLevelData:function(id){
+      for(var x in this.fourLevelBeans){
+        if(this.fourLevelBeans[x].a==id){
+          this.fiveLevelId = this.fourLevelBeans[x].a;
+          this.fiveLevelTitle = this.fourLevelBeans[x].c;
+          this.fiveLevelBeans=this.fourLevelBeans[x].beans||[];
+          this.sixLevelId='';
+          this.sevenLevelId='';
+          this.sixLevelTitle='';
+          this.sevenLevelTitle='';
+          this.sixLevelBeans=[];
+          this.sevenLevelBeans=[];
+          break;
+        }
+      }
+    },
+    getSixLevelData:function(id){
+      console.log(2)
+      this.qrCode();
+      for(var x in this.fiveLevelBeans){
+        if(this.fiveLevelBeans[x].a==id){
+          this.sixLevelId = this.fiveLevelBeans[x].a;
+          this.sixLevelTitle = this.fiveLevelBeans[x].c;
+          this.sixLevelBeans=this.fiveLevelBeans[x].beans||[];
+          this.sevenLevelId='';
+          this.sevenLevelTitle='';
+          this.sevenLevelBeans=[]
+          break;
+        }
+      }
+    },
+    getSevenLevelData:function(id){
+      this.sevenLevelId = id;
+      console.log(1)
+      this.qrCode();
+      return;
+      for(var x in this.fiveLevelBeans){
+        if(this.fiveLevelBeans[x].a==id){
+          this.sixLevelId = this.fiveLevelBeans[x].a;
+          this.sixLevelTitle = this.fiveLevelBeans[x].c;
+          this.sixLevelBeans=this.fiveLevelBeans[x].beans||[];
+          break;
+        }
+      }
+    },
+    qrCode:function(){
+      var str = "http://www.dingdingkuaixiu.com/?secondLevelId="+this.secondLevelId+"&threeLevelId="+this.threeLevelId+"&fourLevelId="+this.fourLevelId+"&fiveLevelId="+this.fiveLevelId+"&sixLevelId="+this.sixLevelId+"&sevenLevelId="+this.sevenLevelId+"#/wash/"+this.firstLevelId
+      console.log(str)
     }
   },
   mounted: function(){
-
-  },
-  methods: function(){
-
-
 
   },
   components: {
@@ -331,17 +434,17 @@ left: 0;top:0;
   width: 219px;
   height: 44px;
   margin-right: 14px;
-  border: 1px solid  #dddddd;
+  border: 1px solid  #ddd;
   position: relative;
-  margin-bottom: 5px
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 44px;
 }
 .OrderPage .order_content .order_wrap .repair_content ul{margin-bottom: 22px;margin-top: 21px;}
 .OrderPage .order_content .order_wrap .repair_content ul li span{
   font-size: 16px;
   color: #333333;
-  position: absolute;
-  left: 94px;
-  top: 11px;
 }
 .OrderPage .order_content .order_wrap .order_bottom .bottom_list{
   margin-top: 51px;
