@@ -14,7 +14,7 @@
 						<li><a v-bind:class="[page=='recruit'&&'active']" href="/#/Recruit">师傅招募</a></li>
 						<li><a v-bind:class="[page=='about'&&'active']" href="/#/About">关于叮叮</a></li>
 				    </ul> 
-				    <a href="tel:15889570065" class="phone_number"><img src="./img/phone_number.png"></a>
+				    <a href="tel:15889570065" class="phone_number"><img src="./img/small_p.png">0755-36529881</a>
 				</div>
 			</div>
 		</div>
@@ -113,7 +113,9 @@ export default {
 
 .header_bar .header .header_content .phone_number {
     position: absolute;
-    right: 10px;
+    right: 6px;
     top: 10px;
+    font-size: 15px;
+    color: #ea5514;
 }
 </style>

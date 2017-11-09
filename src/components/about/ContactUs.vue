@@ -19,25 +19,8 @@
   	    			<div class="infor_one">
   	    				<h2>企业合作</h2>
   	    				<ul>
-  	    					<li>联系人：xxx</li>
-  	    					<li>微信号：xxx</li>
-  	    					<li>E-mail：xxx</li>
-  	    				</ul>
-  	    			</div>
-  	    			<div>
-  	    				<h2>合作物业</h2>
-  	    				<ul>
-  	    					<li>联系人：xxx</li>
-  	    					<li>微信号：xxx</li>
-  	    					<li>E-mail：xxx</li>
-  	    				</ul>
-  	    			</div>
-  	    			<div>
-  	    				<h2>媒体合作</h2>
-  	    				<ul>
-  	    					<li>联系人：xxx</li>
-  	    					<li>微信号：xxx</li>
-  	    					<li>E-mail：xxx</li>
+                      <li>联系电话：4009991891</li>
+                      <li>E-mail：yunying@177dd.cn</li>
   	    				</ul>
   	    			</div>
   	    		</li>
