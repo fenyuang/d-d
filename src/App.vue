@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style>
+@import 'components/css/common.css';
 html,body{height:100%}
 #app {
   height: 100%;
