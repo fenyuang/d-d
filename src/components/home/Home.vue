@@ -36,7 +36,7 @@
         </div>
       </div>
       <!-- 换屏按钮 -->
-      <div class="page_btns">
+      <div class="page_btns" style="display:none">
         <div class="btns_box">
           <a href="javascript:;" class="cur"></a>
           <a href="javascript:;"></a>
