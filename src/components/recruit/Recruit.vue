@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</div> 
-	<Floating></Floating>
+<!-- 	<Floating></Floating> -->
 	<FooterTag></FooterTag>
   </div>
 </template>

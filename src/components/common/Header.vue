@@ -9,12 +9,12 @@
 				</div>
 				<div class="font_list">
 					<ul class="cf">
-						<li><a v-bind:class="[page=='home'&&'active']" href="/#/">首页</a></li>
+						<li class="spe"><a v-bind:class="[page=='home'&&'active']" href="/#/">首页</a></li>
 					<!-- 	<li><a v-bind:class="[page=='order'&&'active']" href="/#/Order">预约维修</a></li> -->
 						<li><a v-bind:class="[page=='recruit'&&'active']" href="/#/Recruit">师傅招募</a></li>
 						<li><a v-bind:class="[page=='about'&&'active']" href="/#/About">关于叮叮</a></li>
 				    </ul> 
-				    <a href="tel:15889570065" class="phone_number"><img src="./img/small_p.png">0755-36529881</a>
+				    <a class="phone_number"><img src="./img/small_p.png">400-999-1981</a>
 				</div>
 			</div>
 		</div>
@@ -113,9 +113,16 @@ export default {
 
 .header_bar .header .header_content .phone_number {
     position: absolute;
-    right: -16px;
+    right: -6px;
     top: 10px;
     font-size: 15px;
     color: #ea5514;
+}
+
+.header_bar .header .header_content .font_list .spe{
+    width: 57px;
+    padding-right: 30px;
+    text-align: center;
+
 }
 </style>

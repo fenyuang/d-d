@@ -4,10 +4,10 @@
   	<div class="footer_wrap cf">
   		<div class="footer_content">
   			<ul class="cf">
-  				<li><a href="">首页</a><font>|</font></li>
-  				<li><a href="">预约维修</a><font>|</font></li>
-  				<li><a href="">师傅招募</a><font>|</font></li>
-  				<li><a href="">关于叮叮</a><font>|</font></li>
+  				<li class="spe"><a href="/#/">首页</a><font>|</font></li>
+  	<!-- 			<li><a href="">预约维修</a><font>|</font></li> -->
+  				<li><a href="/#/Recruit">师傅招募</a><font>|</font></li>
+  				<li style="margin-left:29px;"><a href="/#/About">关于叮叮</a><font>|</font></li>
   			</ul>
   			<div class="address">
 	  			<p>联系电话：0755-36529881（时间：9：00-21：00）</p>
@@ -62,6 +62,9 @@ export default {
     width: 110px;
     padding-right: 24px;
 }
+.footer_wrap ul .spe{
+  width: 
+}
 
 .footer_wrap ul li font {
     color: #ffffff;
@@ -110,5 +113,13 @@ export default {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.footer_wrap .footer_content .active {
+    color: #ea5514;
+}
+
+.footer_wrap .footer_content ul li a:hover {
+    color: #ea5514;
 }
 </style>
