@@ -1,7 +1,9 @@
 <template>
   <div class="RecruitPage">
   	<HeaderTag page="recruit"></HeaderTag>
-	<Focus></Focus>
+  	<div class="banner1">
+  	   <div class="banner_content"></div>   
+  	</div>
 	<div class="join_us same_top">
 		<div class="mini_width">
 			<div class="top">
@@ -60,7 +62,6 @@
 
 <script>
 import HeaderTag from '../common/Header.vue'
-import Focus from '../common/Focus.vue'
 import FooterTag from '../common/Footer.vue'
 import Floating from '../common/Floating.vue'
 export default {
@@ -74,13 +75,30 @@ export default {
 		document.title="师傅招募 | 叮叮快修 整合线下零散维修资源"
 	},
   	components: {
-    	Focus,HeaderTag,FooterTag,Floating
+    	HeaderTag,FooterTag,Floating
   	}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+	.RecruitPage .banner1{
+	  position: relative;
+	  width: 100%;
+	  height: 600px;
+	  margin: 0 auto;}
+	.RecruitPage .banner1 .banner_content{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background-color: #e0e0e0;
+	    background-image: url(./img/banner2.png);
+	    background-repeat: no-repeat;
+	    background-size: auto 100%;
+	    background-position: center;
+	}
 	.join_us{
 		height: 440px;
 		background-color: #f6f6f6;
