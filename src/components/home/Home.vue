@@ -52,6 +52,7 @@
 import HeaderTag from '../common/Header.vue'
 import FooterTag from '../common/Footer.vue'
 import './js/carousel.js'
+
 export default {
   name: 'HomePage',
   data () {
@@ -64,6 +65,7 @@ export default {
     HeaderTag, FooterTag
   },
   mounted:function(){
+    document.title="首页 | 叮叮快修 全品类家庭维修互联网服务平台"
     var _this =this;
     /*换屏*/
     var $pages = $(".page_box");

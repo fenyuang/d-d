@@ -57,6 +57,9 @@ export default {
       value:0
     }
   },
+  mounted:function(){
+  	document.title="关于叮叮 | 叮叮快修 全品类家庭维修互联网服务平台"
+  },
   components: {
     HeaderTag,FooterTag,LtdInfo, JoinUs, ContactUs, Message, FQA,Floating
   }

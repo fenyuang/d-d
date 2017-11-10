@@ -71,7 +71,7 @@ export default {
 		}
 	},
 	mounted: function() {
-		
+		document.title="师傅招募 | 叮叮快修 整合线下零散维修资源"
 	},
   	components: {
     	Focus,HeaderTag,FooterTag,Floating
