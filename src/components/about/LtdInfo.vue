@@ -32,9 +32,9 @@
 		    				<span><img src="./picture/vanke.png"></span>
 		    				<span><img src="./picture/super.png"></span>
 		    				<span><img src="./picture/town.png"></span>
-		    				<span><img src="./picture/vanke.png"></span>
+<!-- 		    				<span><img src="./picture/vanke.png"></span>
 		    				<span><img src="./picture/super.png"></span>
-		    				<span><img src="./picture/town.png"></span>
+		    				<span><img src="./picture/town.png"></span> -->
 		    			</div>
 		    		</li>
 		    	</ul>	

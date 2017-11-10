@@ -1,7 +1,7 @@
 <template>
   <div class="JoinUsPage">
 	<div class="joinus"></div>
-	<div class="target"><a href="http://v7.rabbitpre.com/m/yyA7NrT?lc=3&sui=pEsWkTUY&from=timeline&isappinstalled=0#from=share" target="_blank">前往招聘首页</a></div>
+	<div class="target"><a href="http://jobs.51job.com/all/co4633567.html" target="_blank">前往招聘首页</a></div>
   </div>
 </template>
 
