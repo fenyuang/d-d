@@ -31,7 +31,7 @@
             <div class="miniBox">
               <h1 class="desc animated" v-bind:class="[index===3&&'bounceIn']">每一位师傅都采用严格的五星标准评级</h1>
             </div>
-            <FooterTag></FooterTag>
+            <FooterTag></FooterTag> 
           </div>
         </div>
       </div>
