@@ -10,7 +10,7 @@
 				<div class="font_list">
 					<ul class="cf">
 						<li><a v-bind:class="[page=='home'&&'active']" href="/#/">首页</a></li>
-						<li><a v-bind:class="[page=='order'&&'active']" href="/#/Order">预约维修</a></li>
+					<!-- 	<li><a v-bind:class="[page=='order'&&'active']" href="/#/Order">预约维修</a></li> -->
 						<li><a v-bind:class="[page=='recruit'&&'active']" href="/#/Recruit">师傅招募</a></li>
 						<li><a v-bind:class="[page=='about'&&'active']" href="/#/About">关于叮叮</a></li>
 				    </ul> 
