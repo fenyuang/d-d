@@ -21,8 +21,8 @@
         </div>
         <div class="page_box">
           <div class="content img3">
-            <div class="miniBox spe_two">
-              <h1 class="desc animated" v-bind:class="[index===2&&'zoomIn']">三个月内无限次免费为您提供售后服务</h1>
+            <div class="miniBox ">
+              <h1 class="desc animated spe_two" v-bind:class="[index===2&&'zoomIn']">三个月内无限次免费为您提供售后服务</h1>
             </div>
           </div>
         </div>
