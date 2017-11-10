@@ -227,7 +227,7 @@ export default {
     margin: 280px -180px;
   }
   .page_box .spe_two{
-    margin: 125px 300px
+    margin-top: -200px;
   }
 
   .page_box .img4 .desc{
