@@ -14,16 +14,12 @@
         </div>
         <div class="page_box">
           <div class="content img2">
-            <div class="miniBox">
-              <h1 class="desc animated" v-bind:class="[index===1&&'zoomIn']">用专业的技术解决家庭维修疑难杂症</h1>
-            </div>
+              <h1 class="desc animated spe_two" v-bind:class="[index===1&&'zoomIn']">用专业的技术解决家庭维修疑难杂症</h1>
           </div>
         </div>
         <div class="page_box">
           <div class="content img3">
-            <div class="miniBox ">
               <h1 class="desc animated spe_two" v-bind:class="[index===2&&'zoomIn']">三个月内无限次免费为您提供售后服务</h1>
-            </div>
           </div>
         </div>
         <div class="page_box">
@@ -227,7 +223,7 @@ export default {
     margin: 280px -180px;
   }
   .page_box .spe_two{
-    margin-top: -200px;
+    margin-top: 200px;
   }
 
   .page_box .img4 .desc{
