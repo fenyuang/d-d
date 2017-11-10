@@ -113,7 +113,7 @@ export default {
 
 .header_bar .header .header_content .phone_number {
     position: absolute;
-    right: 6px;
+    right: -16px;
     top: 10px;
     font-size: 15px;
     color: #ea5514;
