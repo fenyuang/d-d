@@ -15,14 +15,14 @@
         <div class="page_box">
           <div class="content img2">
             <div class="miniBox">
-              <h1 class="desc animated" v-bind:class="[index===1&&'swing']">用专业的技术解决家庭维修疑难杂症</h1>
+              <h1 class="desc animated" v-bind:class="[index===1&&'zoomIn']">用专业的技术解决家庭维修疑难杂症</h1>
             </div>
           </div>
         </div>
         <div class="page_box">
           <div class="content img3">
             <div class="miniBox spe_two">
-              <h1 class="desc animated" v-bind:class="[index===2&&'tada']">三个月内无限次免费为您提供售后服务</h1>
+              <h1 class="desc animated" v-bind:class="[index===2&&'zoomIn']">三个月内无限次免费为您提供售后服务</h1>
             </div>
           </div>
         </div>
