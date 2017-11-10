@@ -63,7 +63,7 @@ export default {
 .LtdInfoPage .company_infor .bg_pict{
 	height: 260px;
 	margin:0 auto;
-	background: url(./picture/pict.png) no-repeat;
+	background: url(./picture/gai.png) no-repeat;
     background-position: 50%;
 }
 .LtdInfoPage .company_infor .letter_list ul li h1{
@@ -90,6 +90,7 @@ export default {
 }
 
 .LtdInfoPage .company_infor .letter_wrap .letter_list ul {
+	margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
